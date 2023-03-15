@@ -1,0 +1,44 @@
+Name: Communication
+Type: FolderType
+Children:
+- Name: TagsModbus
+  Type: ObjectLibraryItem
+  Children:
+  - Name: TagsModbus
+    Id: g=aebc753511f943e48105674fcdd496f4
+    Supertype: NetLogic
+    ReferenceType: HasComponent
+    Children:
+    - Name: BehaviourStartPriority
+      Type: BehaviourStartPriorityVariableType
+      DataType: Byte
+      Value: 180
+    - Class: Method
+      Name: ExportTags
+    - Class: Method
+      Name: ImportTags
+    - Name: CsvPath
+      Type: BaseDataVariableType
+      DataType: AbsoluteResourceUri
+      Value: "file:///C:/Temp/ModbusTags/ModbusTagsFile.csv"
+    - Name: FieldSeparator
+      Type: BaseDataVariableType
+      DataType: String
+      Value: ","
+    - Name: WrapFields
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: false
+    - Name: StartingComment
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "#"
+    - Name: ModbusDriver
+      Type: NodePointer
+      DataType: NodeId
+      Value: {"IdType":2,"Id":"284fd673b6142480a5601dc9b6c0122b","Namespace":4}
+      Children:
+      - Name: Kind
+        Type: PropertyType
+        DataType: NodeId
+        Value: {"IdType":0,"Id":0,"Namespace":-1}
