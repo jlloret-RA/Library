@@ -2,3 +2,4 @@ Name: Items
 Type: FolderType
 Children:
 - File: Communication/Communication.yaml
+- File: Widgets/Widgets.yaml

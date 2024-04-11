@@ -4,26 +4,34 @@ Children:
 - File: Items/Items.yaml
 - File: Types/Types.yaml
 - File: Translations/Translations.yaml
-- Name: BranchingEnabled
-  Type: BaseDataVariableType
-  DataType: Boolean
-  Value: false
 - Name: PasswordPolicy
   Type: PasswordPolicy
   Children:
   - Name: MaximumPasswordAge
-    Type: PropertyType
+    Type: BaseDataVariableType
     DataType: UInt16
     Value: 0
   - Name: EnforcePasswordHistory
-    Type: PropertyType
+    Type: BaseDataVariableType
     DataType: Byte
     Value: 1
   - Name: MinimumPasswordAge
-    Type: PropertyType
+    Type: BaseDataVariableType
     DataType: UInt16
     Value: 0
   - Name: MinimumPasswordLength
-    Type: PropertyType
+    Type: BaseDataVariableType
     DataType: Byte
     Value: 8
+- Name: Authentication
+  Type: PropertyGroup
+- Name: AlarmConfiguration
+  Type: PropertyGroup
+  Children:
+  - Name: BranchingEnabled
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ReferenceType: HasProperty
+    Value: false
+- Name: Localization
+  Type: PropertyGroup
